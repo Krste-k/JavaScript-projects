@@ -97,11 +97,22 @@ color: lightgray;
     border-radius: 10px;
     position: relative;
 }
+#ht.bar span::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    border-radius: 10px;
+}
 .bar span::before{
     position: absolute;
     content: "";
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     background-color: black;
     top: 50%;
     left: 2px;
@@ -140,7 +151,15 @@ color: lightgray;
     text-align: justify;
     word-break: break-all;
     font-size: 17px;
-    color: gray;
+    color: rgb(51, 48, 48);
+    margin-top: 10px;
+}
+.right-area ul {
+    padding-left: 70px;
+    text-align: justify;
+    word-break: break-all;
+    font-size: 17px;
+    color: rgb(51, 48, 48);
     margin-top: 10px;
 }
 .work-group{
