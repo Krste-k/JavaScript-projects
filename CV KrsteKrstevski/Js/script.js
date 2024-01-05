@@ -1,15 +1,28 @@
 let cssLink = document.createElement('link');
-cssLink.rel ='stylesheet';
+cssLink.rel = 'stylesheet';
 cssLink.href = './Css/style.css'
 document.head.appendChild(cssLink);
 
-let newEl = document.createElement('div');
-newEl.classList = "newElement";
-console.log(newEl);
-let body = document.querySelector('body').appendChild(newEl);
+document.addEventListener('DOMContentLoaded', function () {
+    var textElement = document.getElementsByTagNameNS('p');
+    var textContent = textElement.textContent;
+    var newText = textContent
+        .split('')
+        .map(function (letter) {
+            return '<span>' + letter + '</span>';
+        })
+        .join('');
 
+    textElement.innerHTML = newText;
+});
 
-newEl.innerHTML = `<div class="print-area">
+let newElement = document.createElement('div');
+
+newElement.classList = "newElement";
+
+let body = document.querySelector('body').appendChild(newElement);
+
+newElement.innerHTML = `<div class="print-area">
 <div class="header">
     <img src="./src/CV.jpg" alt="">
     <div class="header-text">
@@ -28,26 +41,43 @@ newEl.innerHTML = `<div class="print-area">
             <p>Ulica 2 br35 jurumleri Skopje</p>
         </div>
         <div class="skills">
+        <br>
             <h1>SKILLS</h1>
             <div class="bars">
                 <div class="bar">
-                    <p>HTML</p>
+                    <p>HTML/CSS</p>
                     <span></span>
                 </div>
-                <div id="ht" class="bar">
-                    <p>CSS</p>
+                <div class="bar">
+                    <p>BOOTSTRAP</p>
                     <span></span>
                 </div>
-                <div id="ht" class="bar">
+                <div class="bar">
+                    <p>jQuery</p>
+                    <span></span>
+                </div>
+                <div class="bar">
                     <p>JAVASCRIPT</p>
                     <span></span>
                 </div>
                 <div class="bar">
-                    <p>BUTSTRAP</p>
+                    <p>REACT</p>
                     <span></span>
                 </div>
                 <div class="bar">
-                    <p>.NET</p>
+                    <p>ANGULAR</p>
+                    <span></span>
+                </div>
+                <div class="bar">
+                    <p>C#</p>
+                    <span></span>
+                </div>
+                <div class="bar">
+                    <p>API</p>
+                    <span></span>
+                </div>
+                <div class="bar">
+                    <p>MVC</p>
                     <span></span>
                 </div>
                 <div class="bar">
@@ -55,110 +85,125 @@ newEl.innerHTML = `<div class="print-area">
                     <span></span>
                 </div>
                 <div class="bar">
-                    <p>EXCEL</p>
+                    <p>Git / Github</p>
                     <span></span>
                 </div>
                 <div class="bar">
-                    <p>WORD</p>
+                
+                    <p>Leadership</p>
                     <span></span>
                 </div>
-                <div id="ht" class="bar">
-                    <p>AI TOOLS</p>
+                <div class="bar">
+                    <p>Project management</p>
                     <span></span>
                 </div>
-                <div id="ht" class="bar">
-                    <p>WINDOWS</p>
-                    <span></span>
-                </div>
-
+                <div class="bar">
+                <p>Googling</p>
+                <span></span>
+            </div>
+            
             </div>
         </div>
+        <br>
         <div class="follow">
-            <h1>FOLLOW ME</h1>
-            <h4>Facebook</h4>
-            <p>facebook.com/krste/krstevski</p>
-            <h4>INSTAGRAM</h4>
-            <p>instagram.com/krste/krstevski</p>
-            <h4>tweeter</h4>
-            <p>twetter.com/krste/krstevski</p>
-            <h4>git hub</h4>
-            <p>github.com/krste/krstevski</p>
+            <h4>Social Network</h4>
+            <br>  
+            <a href="https://github.com/Krste-k"><img src="./src/Github.png" alt="github logo"></a>
         </div>
+        <br>
+        <br>
+        <img src="./src/download.jpg" width=300 height=180 alt="Linkedin logo">
     </div>
 
     <div class="right-area">
         <div class="about">
             <h1><span><i class=""><img src="./src/Me.png" width="70" height="70"></i>
                 </span>ABOUT ME</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                 Rerum aspernatur vero earum corporis
-                ratione quasi, saepe molestiae quaerat sunt id fugit 
-                mollitia exercitationem quos fugiat!
-                Officia iusto laudantium minus numquam 
-                quae autem eius officiis, exercitationem rerum voluptates
+            <p>
+            Results-driven leader with 11 years of experience, currently excelling as a Supervisor Assistant at Vanhool Macedonia,
+             overseeing a team of 400 employees, including 5 foremen, 21 team leaders, and 6 specialists. 
+             Proven track record in operational efficiency, training, and fostering positive work environments. 
+             Eager to pivot into a dynamic career in programming, leveraging strong analytical and problem-solving skills developed through leadership roles. 
+             Seeking opportunities to apply my diverse skill set and contribute to innovative projects within the programming field.
             </p>
         </div>
         <div class="work">
             <h1><span><img src="./src/images.jpg" width="70" height="70" alt="">
             </span> WORK EXPERIENCE </h1>
             <div class="work-group">
-                <h3>TEAM LEADER-TRAINER</h3>
+                <h3>ASSISTANT SUPERVISOR</h3>
                 <h4>VANHOOL MACEDONIA</h4>
                 <span>2023/now</span>
-                <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                     Quod voluptate quam repellat sequi itaque alias dolores,
-                      distinctio reprehenderit recusandae animi, fuga cupiditate
-                       dolorum ad ratione aspernatur, sit quis cumque et!</P>
+                <p>
+                Currently, I play a key role as a Supervisor Assistant, overseeing a team of 400 individuals to achieve our departmental goals.
+                 Responsible for the supervision of 407 employees, including 5 foremen, 21 team leaders, and 6 specialists.
+                 I work closely with the supervisor to ensure day-to-day operations run smoothly and meet high-quality standards.
+                 One of my key responsibilities involves conducting training sessions to enhance the skills of team members,
+                 contributing to their professional development. I've been instrumental in analyzing and improving workflow processes,
+                 resulting in a increase in overall efficiency. Acting as a liaison between frontline staff and upper management,
+                 I facilitate effective communication to ensure everyone is aligned with our objectives.
+                
+                       </p>
             </div>
             <div class="work-group">
                 <h3>TEAM LEADER</h3>
                 <h4>VANHOOL MACEDONIA</h4>
                 <span>2013/2023</span>
-                <ul>
-                <li>vodenje na grupa</li>
-                <li>proverka na kvalitet </li>
-                <li></li>               
-                </ul>
+                <p>In my previous role as a Team Leader, I successfully managed a team of 20 employees. 
+                I provided guidance and mentorship to ensure optimal performance and fostered a positive and collaborative work environment.
+                Through the implementation of strategic initiatives ,
+                showcasing my ability to drive positive change within the team.
+                Regular performance evaluations were a part of my responsibilities, 
+                and I consistently provided constructive feedback for continuous improvement.
+                </p>
             </div>
             <div class="work-group">
                 <h3>CNC OPERATOR</h3>
                 <h4>DI PORTE</h4>
                 <span>2010/2013</span>
-                <ul>
-                <li>Directly involved in the programming, set-up, and operation of CNC machines.</li>
-                <li>Study blueprints, materials, and production plans prior to machining.</li>
-                <li>Translate blueprints and drawings into dimensions for production.</li>               
-                </ul>
+               <p>
+                Directly involved in the programming, set-up, and operation of CNC machines.
+                Study blueprints, materials, and production plans prior to machining.
+                Translate blueprints and drawings into dimensions for production.               
+                </p>
             </div>
         </div>
         <div class="education">
             <h1><span><img src="./src/Edu.png" width="70" height="70" alt="">
             </span>EDUCATION</h1>
             <div class="edu-group">
-                <h4>ДСУ Георги Димитров
+                <h4>SUGS Georgi Dimitrov
                     <br>
-                    Техничар за финална обработка на дрво
+                    Wood Tehnican
                 </h4>
                 <span>2004/2008</span>
             </div>
             <div class="edu-group">
-                <h4>Универзитет „Св. КИРИЛ И МЕТОДИЈ“ - Скопје</h4>
+                <h4>University "St. Kiril and Metodi"
+                <br>
+                Faculty of Forestry
+                </h4>
                 <span>2009/</span>
             </div>
               <div class="edu-group">
-                <h4>Seavus Education & Development Center</h4>
-                <p>Full stack developer</p>
-            </div>    
-            <div class="edu-group">
-                <h4>CompTIA A+</h4>
-                <p>Certiificate for IT
-                    
-                </p>
-            </div>           
+                <h4>Seavus Education & Development Center
+                <br>
+                Academy for programming and web development
+                </h4>
+                <span>2022/2023</span>
+            </div>              
         </div>
 
     </div>
 </div>
 </div>`
+
+function toggleDarkMode() {
+    var body = document.body;
+    body.classList.toggle('dark-mode');
+}
+
+var container = document.getElementById('dark');
+container.addEventListener('click', toggleDarkMode);
 
 
